@@ -63,6 +63,37 @@
             margin-top: 40px;
             font-size: 14px;
         }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                margin: 0;
+                background-color: #fff;
+                font-size: 12pt;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 20mm; /* A4 paper padding */
+                border: none;
+                box-shadow: none;
+            }
+            .signature {
+                flex-direction: row;
+                justify-content: space-between;
+                page-break-inside: avoid;
+            }
+            h1, h2 {
+                page-break-after: avoid;
+            }
+            p, li {
+                orphans: 3;
+                widows: 3;
+            }
+            ol {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
